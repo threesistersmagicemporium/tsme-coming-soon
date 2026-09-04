@@ -23,32 +23,39 @@
       margin: 0;
       padding: 0;
       width: 100%;
-      min-height: 100%;
+      height: 100%;
       background: #08040a;
     }
 
     body {
+      min-height: 100vh;
       min-height: 100svh;
-      overflow-x: hidden;
+      overflow: hidden;
     }
 
     .page {
-      width: 100%;
-      min-height: 100svh;
+      width: 100vw;
+      height: 100vh;
+      height: 100svh;
       display: flex;
       align-items: center;
       justify-content: center;
-      background:
-        radial-gradient(
-          circle at 50% 30%,
-          #1a0820 0%,
-          #0f0613 45%,
-          #08040a 100%
-        );
+      overflow: hidden;
+      background: #08040a;
+    }
+
+    picture {
+      display: block;
+      width: 100%;
+      height: 100%;
     }
 
     .art {
       display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
     }
 
     .sr-only {
@@ -63,59 +70,64 @@
       border: 0;
     }
 
-    /* DESKTOP / LANDSCAPE */
-    @media (min-width: 901px) {
-      .page {
-        height: 100svh;
-        overflow: hidden;
-      }
-
+    /* Desktop / landscape screens */
+    @media (orientation: landscape) {
       .art {
-        width: auto;
-        height: 100svh;
-        max-width: 100vw;
         object-fit: contain;
       }
     }
 
-    /* MOBILE / TABLET PORTRAIT */
-    @media (max-width: 900px) {
-      .page {
-        min-height: 100svh;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-      }
-
+    /* Phones / portrait screens */
+    @media (orientation: portrait) {
       .art {
-        width: 100%;
-        height: auto;
-        max-width: 100%;
+        object-fit: contain;
       }
     }
   </style>
 </head>
 
 <body>
-  <main class="page" aria-label="Three Sisters Magic Emporium coming soon page">
 
-    <img
-      class="art"
-      src="coming-soon.png"
-      alt="Three Sisters Magic Emporium. Where Magic Begins. Coming Soon."
-    >
+  <main
+    class="page"
+    aria-label="Three Sisters Magic Emporium coming soon page"
+  >
+
+    <picture>
+
+      <!-- Phone / portrait artwork -->
+      <source
+        media="(orientation: portrait)"
+        srcset="coming-soon-mobile.png"
+      >
+
+      <!-- Desktop / landscape artwork -->
+      <img
+        class="art"
+        src="coming-soon.png"
+        alt="Three Sisters Magic Emporium. Where Magic Begins. Coming Soon."
+      >
+
+    </picture>
 
     <section class="sr-only">
       <h1>Three Sisters Magic Emporium</h1>
       <p>Where Magic Begins.</p>
+
       <h2>Coming Soon</h2>
-      <p>Our online store is currently being prepared.</p>
+
       <p>
-        A magical range of crystals, gifts, spellbinding treasures
-        and so much more will be with you soon.
+        Our online store is currently being prepared.
+      </p>
+
+      <p>
+        A magical range of crystals, gifts,
+        spellbinding treasures and so much more
+        will be with you soon.
       </p>
     </section>
 
   </main>
+
 </body>
 </html>
