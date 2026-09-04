@@ -1,9 +1,9 @@
-
 <!doctype html>
 <html lang="en-GB">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Three Sisters Magic Emporium — Coming Soon</title>
 
   <meta
@@ -21,6 +21,7 @@
     html,
     body {
       margin: 0;
+      padding: 0;
       width: 100%;
       min-height: 100%;
       background: #08040a;
@@ -29,27 +30,22 @@
     body {
       min-height: 100svh;
       overflow-x: hidden;
-      font-family: Georgia, "Times New Roman", serif;
     }
 
     .page {
-  width: 100%;
-  min-height: 100svh;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  overflow-x: hidden;
-  background:
-    radial-gradient(circle at 50% 30%, #1a0820 0%, #0f0613 45%, #08040a 100%);
-}
+      width: 100%;
+      min-height: 100svh;
+      margin: 0;
+      padding: 0;
+      background: #08040a;
+    }
 
     .art {
       display: block;
       width: 100%;
       height: auto;
-      max-width: 100%;
-      max-height: 100svh;
-      object-fit: contain;
+      margin: 0;
+      padding: 0;
     }
 
     .sr-only {
@@ -67,17 +63,22 @@
     @media (max-width: 900px) {
       .page {
         min-height: 100svh;
+        display: flex;
         align-items: center;
         justify-content: center;
-        overflow: hidden;
+        background:
+          radial-gradient(
+            circle at 50% 30%,
+            #1a0820 0%,
+            #0f0613 45%,
+            #08040a 100%
+          );
       }
 
       .art {
         width: 100%;
         height: auto;
         max-width: 100%;
-        max-height: none;
-        object-fit: contain;
       }
     }
   </style>
@@ -85,6 +86,7 @@
 
 <body>
   <main class="page" aria-label="Three Sisters Magic Emporium coming soon page">
+
     <img
       class="art"
       src="coming-soon.png"
@@ -101,6 +103,7 @@
         and so much more will be with you soon.
       </p>
     </section>
+
   </main>
 </body>
 </html>
