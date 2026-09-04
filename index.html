@@ -44,15 +44,19 @@
       border: 0;
     }
     @media (max-aspect-ratio: 4/5) {
-      body { background: #08040a; }
-      .art {
-        width: 100vw;
-        height: auto;
-        min-height: 0;
-        object-fit: contain;
-      }
-      .page { min-height: 100svh; }
-    }
+  body { background: #08040a; }
+  .art {
+    width: 100vw;
+    height: 100svh;
+    min-height: 100svh;
+    object-fit: cover;
+    object-position: center 45%;
+  }
+  .page {
+    min-height: 100svh;
+    overflow: hidden;
+  }
+}
   </style>
 </head>
 <body>
