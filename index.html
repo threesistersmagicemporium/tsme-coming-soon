@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Three Sisters Magic Emporium — Coming Soon</title>
+  <meta name="description" content="Three Sisters Magic Emporium is coming soon. Our online store is currently being prepared.">
+  <meta name="theme-color" content="#120713">
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; background: #0a050c; }
+    body {
+      min-height: 100svh;
+      display: grid;
+      place-items: center;
+      overflow-x: hidden;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+    .page {
+      width: 100%;
+      min-height: 100svh;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle at 50% 30%, rgba(84, 16, 92, .28), transparent 55%),
+        #0a050c;
+    }
+    .art {
+      display: block;
+      width: 100%;
+      height: 100svh;
+      object-fit: cover;
+      object-position: center center;
+    }
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    @media (max-aspect-ratio: 4/5) {
+      body { background: #08040a; }
+      .art {
+        width: 100vw;
+        height: auto;
+        min-height: 0;
+        object-fit: contain;
+      }
+      .page { min-height: 100svh; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page" aria-label="Three Sisters Magic Emporium coming soon">
+    <img class="art" src="coming-soon.png" alt="Three Sisters Magic Emporium — Coming Soon">
+    <section class="sr-only">
+      <h1>Three Sisters Magic Emporium</h1>
+      <p>Where Magic Begins.</p>
+      <h2>Coming Soon</h2>
+      <p>Our online store is currently being prepared.</p>
+      <p>A magical range of crystals, gifts, spellbinding treasures and so much more will be with you soon.</p>
+    </section>
+  </main>
+</body>
+</html>
