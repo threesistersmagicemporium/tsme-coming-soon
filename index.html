@@ -1,37 +1,56 @@
+
 <!doctype html>
 <html lang="en-GB">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Three Sisters Magic Emporium — Coming Soon</title>
-  <meta name="description" content="Three Sisters Magic Emporium is coming soon. Our online store is currently being prepared.">
-  <meta name="theme-color" content="#120713">
+
+  <meta
+    name="description"
+    content="Three Sisters Magic Emporium — Coming Soon. Where Magic Begins."
+  >
+
+  <meta name="theme-color" content="#08040a">
+
   <style>
-    * { box-sizing: border-box; }
-    html, body { margin: 0; min-height: 100%; background: #0a050c; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      width: 100%;
+      min-height: 100%;
+      background: #08040a;
+    }
+
     body {
       min-height: 100svh;
-      display: grid;
-      place-items: center;
       overflow-x: hidden;
       font-family: Georgia, "Times New Roman", serif;
     }
+
     .page {
       width: 100%;
       min-height: 100svh;
-      display: grid;
-      place-items: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       background:
-        radial-gradient(circle at 50% 30%, rgba(84, 16, 92, .28), transparent 55%),
-        #0a050c;
+        radial-gradient(circle at 50% 30%, #1a0820 0%, #0f0613 45%, #08040a 100%);
     }
+
     .art {
-  display: block;
-  width: 100%;
-  height: 100svh;
-  object-fit: cover;
-  object-position: center center;
-}
+      display: block;
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+      max-height: 100svh;
+      object-fit: contain;
+    }
+
     .sr-only {
       position: absolute;
       width: 1px;
@@ -42,40 +61,44 @@
       clip: rect(0, 0, 0, 0);
       white-space: nowrap;
       border: 0;
-    @media (max-aspect-ratio: 4/5) {
-  body {
-    background: #08040a;
-  }
-
-  .page {
-    width: 100%;
-    min-height: 100svh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-  }
-
-  .art {
-    display: block;
-    width: 100% !important;
-    height: auto !important;
-    max-width: 100% !important;
-    max-height: none !important;
-  }
     }
-  
+
+    @media (max-width: 900px) {
+      .page {
+        min-height: 100svh;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      .art {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        max-height: none;
+        object-fit: contain;
+      }
+    }
   </style>
 </head>
+
 <body>
-  <main class="page" aria-label="Three Sisters Magic Emporium coming soon">
-    <img class="art" src="coming-soon.png" alt="Three Sisters Magic Emporium — Coming Soon">
+  <main class="page" aria-label="Three Sisters Magic Emporium coming soon page">
+    <img
+      class="art"
+      src="coming-soon.png"
+      alt="Three Sisters Magic Emporium. Where Magic Begins. Coming Soon."
+    >
+
     <section class="sr-only">
       <h1>Three Sisters Magic Emporium</h1>
       <p>Where Magic Begins.</p>
       <h2>Coming Soon</h2>
       <p>Our online store is currently being prepared.</p>
-      <p>A magical range of crystals, gifts, spellbinding treasures and so much more will be with you soon.</p>
+      <p>
+        A magical range of crystals, gifts, spellbinding treasures
+        and so much more will be with you soon.
+      </p>
     </section>
   </main>
 </body>
